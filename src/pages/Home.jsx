@@ -1,14 +1,29 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useState } from 'react'
 import { toast } from 'react-toastify'
 
 const Home = () => {
-  return (
-    <div>
+    const [username, setUsername] = useState("");
 
-        <button onClick={()=>{toast.success("Clicked!")}}>Click Me</button>
-        <button onClick={()=>{toast.error("Clicked!")}}>Click Me</button>
-    </div>
-  )
+    const fetchGitHubUser = async (username) =>{
+       
+
+        try {
+
+            const {data} = await axios.get(`https://api.github.com/users/${username}`);
+            console.log(data);
+            
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    return (
+        <div>
+<input type="text" placeholder='Enter User Name' value={username} onChange={(e)=>{setUsername(e.target.value)}} />
+
+<button onClick={()=>fetchGitHubUser(username)}>Search</button>
+        </div>
+    )
 }
 
 export default Home
