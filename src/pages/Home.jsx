@@ -14,7 +14,7 @@ const Home = () => {
             console.log(data);
             
         } catch (error) {
-            console.log(error);
+            console.log(error.message);
         }
     }
     return (
