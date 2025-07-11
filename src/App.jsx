@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import Repos from './pages/Repos'
 import Home from './pages/Home'
+import Header from './components/Header'
 
 function App() {
 
@@ -10,9 +11,7 @@ function App() {
   return (
     <>
 
-      <h1>GitHubGround</h1>
-      <hr />
-
+    <Header/>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/repos' element={<Repos />} />
