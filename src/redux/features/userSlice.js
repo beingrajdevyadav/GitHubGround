@@ -1,15 +1,29 @@
-// import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
-// const userSlice = createSlice({
-//     name:"user", 
-//     initialState: {
-//         username: ""
-//     },
+const initialState = {
+    avatar_url : "",
+    bio:"",
+    followers : 0,
+    following: 0,
+    login: "",
+    name: "",
+    public_repos: 0,
+    repos_url: "",
+}
 
-//     reducers: {
+const userSlice = createSlice({
+    name: "user",
+    initialState,
 
-//         setUserName :(state, payload)=>{
-//             state.username = payload.username;
-//         }
-//     }
-// })
+    reducers:{
+        setUser:(state, action)=>{
+            return {...state, ...action.payload};
+        },
+
+        clearUser : ()=> initialState,
+    }
+});
+
+
+export const {setUser, clearUser} = userSlice.actions;
+export default userSlice.reducer;
