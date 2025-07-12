@@ -1,6 +1,7 @@
 import React from 'react'
 import GitHubCalendar from 'react-github-calendar';
 import { useSelector } from 'react-redux'
+import "../css/Ground.css"
 
 const Ground = () => {
     const user = useSelector((state) => state.user);
@@ -18,10 +19,13 @@ const Ground = () => {
                     <img src={user.avatar_url} alt="" />
                 </div>
 
-                <h2>{user.name}</h2>
-                <p>{user.login}</p>
+                <div className="profile-info">
+                    <h2>{user.name}</h2>
+                    <p>{user.login}</p>
 
-                <p>{user.bio}</p>
+                    <p>{user.bio}</p>
+                </div>
+
 
                 <button onClick={viewProfile}>View Profile</button>
 
