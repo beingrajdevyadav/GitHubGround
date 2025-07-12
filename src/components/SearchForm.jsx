@@ -18,8 +18,15 @@ const SearchForm = () => {
     e.preventDefault();
 
     dispatch(clearUser())
-
     setIsLoading(true);
+
+    if(!username){
+      errorToast("Enter A Username!");
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 2000);
+      return;
+    }
     try {
       const { data } = await axios.get(`https://api.github.com/users/${username}`);
 
