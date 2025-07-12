@@ -11,6 +11,7 @@
     width: 40%;
     padding: 3rem 2rem 1rem;
     background-color: #0318286d;
+        border-radius: 5px;
 }
 
 .search-form hr {
