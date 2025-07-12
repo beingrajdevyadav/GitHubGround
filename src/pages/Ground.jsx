@@ -48,8 +48,12 @@ const Ground = () => {
                 </div>
 
 
+<div className="report">
+    <h2>GitHub Profile Stats</h2>
+<img src={`https://github-readme-stats.vercel.app/api?username=${user.login}&show_icons=true&theme=github_dark`} alt="" />
+</div>
 
-                <img src={`https://github-readme-stats.vercel.app/api?username=${user.login}&show_icons=true&theme=github_dark`} alt="" />
+                
 
                 <img src={`https://streak-stats.demolab.com?user=${user.login}&theme=dark`} alt="" />
 
