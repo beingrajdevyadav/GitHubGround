@@ -20,16 +20,19 @@ const Ground = () => {
                 </div>
 
                 <div className="profile-info">
-                    <h2>{user.name}</h2>
-                    <p>{user.login}</p>
-
+                    <h1>{user.name}</h1>
+                    <p className='light'>{user.login}</p>
                     <p>{user.bio}</p>
+
+                    <hr />
+                </div>
+
+                <div className="profile-actions">
+                    <button>Public Repos {user.public_repos}</button>
+                    <button onClick={viewProfile}>View Profile</button>
                 </div>
 
 
-                <button onClick={viewProfile}>View Profile</button>
-
-                <GitHubCalendar username={user.login} />
             </div>
             <div className="reports">
 
@@ -46,6 +49,10 @@ const Ground = () => {
 
 
                 <img src={`http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=${user.login}&theme=github_dark&utcOffset=8`} alt="" />
+
+
+                <GitHubCalendar username={user.login} />
+
             </div>
         </div>
     )

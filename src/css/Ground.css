@@ -6,13 +6,14 @@
 }
 
 .ground .infos{
-    width: 30%;
+    width: 25%;
 }
 
 .infos .profile-pic{
     width: 300px;
     height: 300px;
     border-radius: 50%;
+    margin: auto;
 }
 
 .profile-pic img{
@@ -22,5 +23,38 @@
     object-fit: cover;
 }
 .infos .profile-info{
-    
+    color: #ddd;
+    text-align: center;
+}
+.profile-info .light{
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.profile-info hr{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #666;
+    margin: 1rem 0;
+}
+
+.infos .profile-actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.profile-actions button{
+    height: 50px;
+    width: 45%;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: #0c437a;
+    color: #ddd;
+    border-radius: 25px;
+    transition: all .5s ease-in-out;
+}
+
+.profile-actions button:hover{
+    background-color: #105fad;
 }
