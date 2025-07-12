@@ -14,9 +14,8 @@ body {
 
 .header {
   padding: 2rem 1rem;
-  background-color: #041e326d;
-  color: #ffb300c1;
-  box-shadow: 0px 3px 6px #555;
+  background-color: #ffb300c1;
+  color: #ddd;
 }
 
 .search-form {
@@ -81,6 +80,8 @@ body {
   height: 50px;
   color: #ddd;
   background-color: #033303;
+  background-color: #074607;
+
   width: 30%;
   border-radius: 5px;
   border: none;
@@ -90,7 +91,7 @@ body {
 }
 
 .btn-control button:hover {
-  background-color: #074607;
+  background-color: #066708;
 }
 
 .search-img {
