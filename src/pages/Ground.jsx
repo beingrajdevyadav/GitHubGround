@@ -15,6 +15,7 @@ const Ground = () => {
     return (
         <div className='ground'>
             <div className="infos">
+                <button className='back-btn'><i className="fa-solid fa-arrow-left"></i></button>
                 <div className="profile-pic">
                     <img src={user.avatar_url} alt="" />
                 </div>

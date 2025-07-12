@@ -8,7 +8,20 @@
 .ground .infos{
     width: 25%;
 }
-
+.infos .back-btn{
+    height: 50px;
+    width: 50px;
+    background-color: #0c437a;
+    color: #ddd;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+.infos .back-btn:hover{
+    background-color: #105fad;
+}
 .infos .profile-pic{
     width: 300px;
     height: 300px;
