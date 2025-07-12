@@ -1,24 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   font-family: "Poppins", sans-serif;
   background-color: #01101b;
   color: #eee;
 }
 
-.header{
+.header {
   padding: 1rem;
   background-color: #021421;
-border-bottom: 1px solid #444;
+  border-bottom: 1px solid #444;
+  color: #ffb300;
 }
 
-.search-form{
+.search-form {
   padding: 1rem;
   width: 100%;
   height: 80vh;
@@ -27,24 +28,46 @@ border-bottom: 1px solid #444;
   align-items: center;
 }
 
-.search-form form{
-  width: 30%;
+.search-form form {
+  width: 40%;
+  box-shadow: 0 4px 8px #3d3b3b;
+  border-radius: 10px;
+  padding: 3rem 2rem;
 }
 
-.search-form span{
+.form-control {
+  width: 100%;
+  padding: .3rem;
+  margin-top: 2rem;
+}
+
+.form-control input {
+  padding: 10px 15px;
+  width: 100%;
+  height: 60px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background-color: #021522;
+  color: #aaa;
+  font-size: 16px;
+}
+
+
+.search-form span {
   color: #ffb300;
   font-size: 3rem;
 }
 
-.flex-center{
+.flex-center {
   display: flex;
   justify-content: start;
   align-items: center;
   gap: .5rem;
 }
 
-.search-img{
- 
+.search-img {
+
   border-radius: 50%;
   overflow: hidden;
   padding: .125rem;
@@ -52,13 +75,14 @@ border-bottom: 1px solid #444;
   justify-content: center;
   align-content: center;
 }
-.search-img img{
-width: 150px;
+
+.search-img img {
+  width: 150px;
   object-fit: cover;
 }
 
 
-.footer{
+.footer {
   padding: 1rem;
   text-align: center;
   font-size: 12px;
