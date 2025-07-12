@@ -9,6 +9,7 @@ const initialState = {
     name: "",
     public_repos: 0,
     repos_url: "",
+    html_url: "",
 }
 
 const userSlice = createSlice({
@@ -17,7 +18,7 @@ const userSlice = createSlice({
 
     reducers:{
         setUser:(state, action)=>{
-             const { avatar_url, bio, followers, following, login, name, repos_url, public_repos } = action.payload;
+             const { avatar_url, bio, followers, following, login, name, repos_url, public_repos, html_url } = action.payload;
 
              state.avatar_url = avatar_url;
              state.bio = bio;
@@ -27,6 +28,7 @@ const userSlice = createSlice({
              state.name = name;
              state.public_repos = public_repos;
              state.repos_url = repos_url;
+             state.html_url = html_url;
         },
 
         clearUser : (state)=>{

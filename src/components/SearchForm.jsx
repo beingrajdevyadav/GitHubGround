@@ -5,7 +5,7 @@ import { clearUser, setUser } from '../redux/features/userSlice';
 import { useNavigate } from 'react-router-dom';
 
 import "../css/SearchForm.css"
-import { errorToast } from '../toasts/toasts';
+import { errorToast, successToast } from '../toasts/toasts';
 
 const SearchForm = () => {
   const [username, setUsername] = useState("");
@@ -24,6 +24,8 @@ const SearchForm = () => {
       const { data } = await axios.get(`https://api.github.com/users/${username}`);
 
       console.log(data);
+      successToast(`${data.name} Profile Fetched!`)
+
       const userData = {
         avatar_url: data.avatar_url,
         bio: data.bio,
@@ -32,16 +34,17 @@ const SearchForm = () => {
         login: data.login,
         name: data.name,
         public_repos: data.public_repos,
-        repos_url: data.repos_url
+        repos_url: data.repos_url,
+        html_url: data.html_url,
       };
 
       dispatch(setUser(userData));
       navigate("/ground");
 
     } catch (error) {
-      console.log(error.response?.status);
+      // console.log(error.response?.status);
 
-      errorToast("User Not Found!")
+      errorToast(`${error.response?.status} User Not Found!`);
     }
 
 
