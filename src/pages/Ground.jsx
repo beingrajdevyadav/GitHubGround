@@ -2,20 +2,30 @@ import React from 'react'
 import GitHubCalendar from 'react-github-calendar';
 import { useSelector } from 'react-redux'
 import "../css/Ground.css"
+import { useNavigate } from 'react-router-dom';
 
 const Ground = () => {
+    const navigate = useNavigate();
     const user = useSelector((state) => state.user);
-    console.log(user);
+    // console.log(user);
 
+
+    // view profile button functionality
     const viewProfile = () => {
         window.open(user.html_url, "_blank");
     };
 
+    // back button functionality
+    const backToHome = () => {
+        navigate("/");
+    }
 
     return (
         <div className='ground'>
             <div className="infos">
-                <button className='back-btn'><i className="fa-solid fa-arrow-left"></i></button>
+
+                <button onClick={backToHome} className='back-btn'><i className="fa-solid fa-arrow-left"></i></button>
+
                 <div className="profile-pic">
                     <img src={user.avatar_url} alt="" />
                 </div>
@@ -44,7 +54,7 @@ const Ground = () => {
 
                 <div className="report">
                     <h2>GitHub Profile Summary</h2>
-                    <img  src={`http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=${user.login}&theme=github_dark`} alt="" />
+                    <img src={`http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=${user.login}&theme=github_dark`} alt="" />
                 </div>
 
 
