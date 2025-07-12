@@ -1,4 +1,5 @@
 import React from 'react'
+import GitHubCalendar from 'react-github-calendar';
 import { useSelector } from 'react-redux'
 
 const Ground = () => {
@@ -23,6 +24,8 @@ const Ground = () => {
                 <p>{user.bio}</p>
 
                 <button onClick={viewProfile}>View Profile</button>
+
+                <GitHubCalendar username={user.login} />
             </div>
             <div className="reports"></div>
         </div>
