@@ -42,7 +42,7 @@ body {
 .form-control {
   width: 100%;
   padding: .3rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .form-control input {
@@ -54,7 +54,7 @@ body {
   border: none;
   background-color: #021522;
   color: #aaa;
-  font-size: 16px;
+  font-size: 14px;
   border: 1px solid #555;
 }
 
@@ -79,9 +79,7 @@ body {
 .btn-control button {
   height: 50px;
   color: #ddd;
-  background-color: #033303;
   background-color: #074607;
-
   width: 30%;
   border-radius: 5px;
   border: none;
@@ -95,22 +93,22 @@ body {
 }
 
 .search-img {
+  width: 100%;
   border-radius: 50%;
   overflow: hidden;
   padding: .125rem;
   display: flex;
   justify-content: center;
-  align-content: center;
+
 }
 
 .search-img img {
-  width: 150px;
-  object-fit: cover;
+  height: 300px;
 }
 
 
 .footer {
-  padding: 1rem;
+  padding:2rem 1rem;
   text-align: center;
   font-size: 12px;
   background-color: #021421;
