@@ -17,10 +17,21 @@ const userSlice = createSlice({
 
     reducers:{
         setUser:(state, action)=>{
-            return {...state, ...action.payload};
+             const { avatar_url, bio, followers, following, login, name, repos_url, public_repos } = action.payload;
+
+             state.avatar_url = avatar_url;
+             state.bio = bio;
+             state.followers = followers;
+             state.following = following;
+             state.login = login;
+             state.name = name;
+             state.public_repos = public_repos;
+             state.repos_url = repos_url;
         },
 
-        clearUser : ()=> initialState,
+        clearUser : (state)=>{
+            Object.assign(state, initialState);
+        }
     }
 });
 

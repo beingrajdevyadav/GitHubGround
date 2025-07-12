@@ -1,20 +1,42 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux';
+import { clearUser, setUser } from '../redux/features/userSlice';
+import { useNavigate } from 'react-router-dom';
 
 const SearchForm = () => {
   const [username, setUsername] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    dispatch(clearUser())
 
     setIsLoading(true);
     try {
       const { data } = await axios.get(`https://api.github.com/users/${username}`);
 
       console.log(data);
+      const userData = {
+        avatar_url: data.avatar_url,
+        bio: data.bio,
+        followers: data.followers,
+        following: data.following,
+        login: data.login,
+        name: data.name,
+        public_repos: data.public_repos,
+        repos_url: data.repos_url
+      };
+
+      dispatch(setUser(userData));
+      navigate("/repos");
+
     } catch (error) {
-      console.log(error);
+      console.log(error.response?.status);
     }
 
 
