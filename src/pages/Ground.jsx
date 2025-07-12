@@ -44,7 +44,7 @@ const Ground = () => {
 
                 <div className="report">
                     <h2>GitHub Profile Summary</h2>
-                    <img src={`http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=${user.login}&theme=github_dark`} alt="" />
+                    <img  src={`http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=${user.login}&theme=github_dark`} alt="" />
                 </div>
 
 
@@ -67,9 +67,9 @@ const Ground = () => {
                 </div>
 
 
-<div className="report">
-    <h2>GitHub Calendar</h2>
-</div>
+                <div className="report">
+                    <h2>GitHub Calendar</h2>
+                </div>
 
                 <GitHubCalendar style={{ width: "100%" }} username={user.login} />
 
