@@ -5,6 +5,7 @@ import { clearUser, setUser } from '../redux/features/userSlice';
 import { useNavigate } from 'react-router-dom';
 
 import "../css/SearchForm.css"
+import { errorToast } from '../toasts/toasts';
 
 const SearchForm = () => {
   const [username, setUsername] = useState("");
@@ -35,10 +36,12 @@ const SearchForm = () => {
       };
 
       dispatch(setUser(userData));
-      navigate("/repos");
+      navigate("/ground");
 
     } catch (error) {
       console.log(error.response?.status);
+
+      errorToast("User Not Found!")
     }
 
 

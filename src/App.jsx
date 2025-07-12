@@ -5,6 +5,7 @@ import Repos from './pages/Repos'
 import Home from './pages/Home'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Ground from './pages/Ground'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
     <Header/>
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/ground' element={<Ground />} />
         <Route path='/repos' element={<Repos />} />
       </Routes>
       <Footer/>
