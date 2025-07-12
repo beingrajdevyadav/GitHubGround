@@ -1,7 +1,7 @@
 
 .search-form {
   padding: 1rem;
-  width: 100%;
+  width: 95vw;
   height: 80vh;
   display: flex;
   justify-content: center;
@@ -90,7 +90,7 @@
 
 @media screen and (max-width: 768px) {
     .search-form form{
-        width: 100%;
+        width:100%;
         padding: 1rem;
     }
 
