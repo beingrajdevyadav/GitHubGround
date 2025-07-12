@@ -3,6 +3,7 @@ import GitHubCalendar from 'react-github-calendar';
 import { useSelector } from 'react-redux'
 import "../css/Ground.css"
 import { useNavigate } from 'react-router-dom';
+import { infoToast } from '../toasts/toasts';
 
 const Ground = () => {
     const navigate = useNavigate();
@@ -17,7 +18,14 @@ const Ground = () => {
 
     // back button functionality
     const backToHome = () => {
+        infoToast("Welcome to Home!")
         navigate("/");
+    }
+
+    // repos button functionality
+    const handlePublicReposClick = ()=>{
+        infoToast("Welcome to Repos!")
+        navigate("/repos");
     }
 
     return (
@@ -39,7 +47,7 @@ const Ground = () => {
                 </div>
 
                 <div className="profile-actions">
-                    <button>Public Repos {user.public_repos}</button>
+                    <button onClick={handlePublicReposClick}>Public Repos {user.public_repos}</button>
                     <button onClick={viewProfile}>View Profile</button>
                 </div>
 

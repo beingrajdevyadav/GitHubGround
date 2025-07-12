@@ -23,7 +23,7 @@ const SearchForm = () => {
     try {
       const { data } = await axios.get(`https://api.github.com/users/${username}`);
 
-      console.log(data);
+      // console.log(data);
       successToast(`${data.name} Profile Fetched!`)
 
       const userData = {
@@ -58,7 +58,7 @@ const SearchForm = () => {
       {
         isLoading ? (
           <div className="search-img">
-            <img src="https://media.tenor.com/A15H8E1VUh8AAAAM/github-cat.gif" alt="" />
+            <img src="https://assets-v2.lottiefiles.com/a/e372720e-6605-11ee-871a-8f8eda2d921c/3voaK5KS17.gif" alt="" />
           </div>
         ) : (
           <form action="" onSubmit={handleSubmit}>
