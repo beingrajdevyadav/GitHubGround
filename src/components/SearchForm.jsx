@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const SearchForm = () => {
+  const [username, setUsername] = useState("");
   return (
     <div className='search-form'>
 
@@ -10,13 +11,13 @@ const SearchForm = () => {
       <form action="">
         <h3>Welcome <br /> To GitHubGround</h3>
 
-<div className="form-control">
-        <input type="text" placeholder='Search A GitHub Account' />
-</div>
+        <div className="form-control">
+          <input type="text" value={username} onChange={(e)=>setUsername(e.target.value)}  placeholder='Search A GitHub Account' />
+        </div>
 
-<div className="btn-control">
-  <button type='submit'>Search</button>
-</div>
+        <div className="btn-control">
+          <button type='submit'>Search</button>
+        </div>
 
       </form>
       {/* <hr /> */}
