@@ -27,6 +27,22 @@ border-bottom: 1px solid #444;
   align-items: center;
 }
 
+.search-form form{
+  width: 30%;
+}
+
+.search-form span{
+  color: #ffb300;
+  font-size: 3rem;
+}
+
+.flex-center{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: .5rem;
+}
+
 .search-img{
  
   border-radius: 50%;

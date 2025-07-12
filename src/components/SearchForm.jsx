@@ -54,7 +54,10 @@ const SearchForm = () => {
           </div>
         ) : (
           <form action="" onSubmit={handleSubmit}>
-            <h3>Welcome <br /> To GitHubGround</h3>
+            <h3>Welcome</h3>
+            <h3 className='flex-center'>To <span>GitHubGround</span></h3>
+            <hr />
+
             <div className="form-control">
               <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder='Search A GitHub Account' />
             </div>
