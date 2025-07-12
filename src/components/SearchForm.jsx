@@ -4,6 +4,8 @@ import { useDispatch } from 'react-redux';
 import { clearUser, setUser } from '../redux/features/userSlice';
 import { useNavigate } from 'react-router-dom';
 
+import "../css/SearchForm.css"
+
 const SearchForm = () => {
   const [username, setUsername] = useState("");
   const [isLoading, setIsLoading] = useState(false);
