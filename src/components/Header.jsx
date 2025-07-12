@@ -1,9 +1,9 @@
 import React from 'react'
-
 const Header = () => {
+
   return (
     <div className='header'>
-        <h2>GitHubGround</h2>
+     
     </div>
   )
 }
