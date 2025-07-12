@@ -48,22 +48,30 @@ const Ground = () => {
                 </div>
 
 
+
+                <div className="report2">
+                    <img src={`https://github-readme-stats.vercel.app/api?username=${user.login}&show_icons=true&theme=github_dark`} alt="" />
+
+                    <img src={`https://streak-stats.demolab.com?user=${user.login}&theme=dark`} alt="" />
+                </div>
+
+                <div className="report">
+                    <h2>GitHub Overview</h2>
+                </div>
+
+                <div className="report2">
+                    <img src={`http://github-profile-summary-cards.vercel.app/api/cards/stats?username=${user.login}&theme=github_dark`} alt="" />
+
+
+                    <img src={`http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=${user.login}&theme=github_dark&utcOffset=8`} alt="" />
+                </div>
+
+
 <div className="report">
-    <h2>GitHub Profile Stats</h2>
-<img src={`https://github-readme-stats.vercel.app/api?username=${user.login}&show_icons=true&theme=github_dark`} alt="" />
+    <h2>GitHub Calendar</h2>
 </div>
 
-                
-
-                <img src={`https://streak-stats.demolab.com?user=${user.login}&theme=dark`} alt="" />
-
-                <img src={`http://github-profile-summary-cards.vercel.app/api/cards/stats?username=${user.login}&theme=github_dark`} alt="" />
-
-
-                <img src={`http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=${user.login}&theme=github_dark&utcOffset=8`} alt="" />
-
-
-                <GitHubCalendar username={user.login} />
+                <GitHubCalendar style={{ width: "100%" }} username={user.login} />
 
             </div>
         </div>
