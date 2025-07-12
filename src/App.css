@@ -14,9 +14,35 @@ body{
 
 .header{
   padding: 1rem;
+  background-color: #021421;
+border-bottom: 1px solid #444;
 }
+
+.search-form{
+  padding: 1rem;
+  width: 100%;
+  height: 80vh;
+}
+
+.search-img{
+ 
+  border-radius: 50%;
+  overflow: hidden;
+  padding: .125rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.search-img img{
+width: 150px;
+  object-fit: cover;
+}
+
+
 .footer{
   padding: 1rem;
   text-align: center;
   font-size: 12px;
+  background-color: #021421;
+
 }
