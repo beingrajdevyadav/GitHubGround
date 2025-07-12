@@ -47,8 +47,9 @@
 .profile-info hr{
     outline: none;
     border: none;
-    border-bottom: 1px solid #666;
+    border-bottom: 2px solid #666;
     margin: 1rem 0;
+    border-radius: 3px;
 }
 
 .infos .profile-actions{
@@ -70,4 +71,24 @@
 
 .profile-actions button:hover{
     background-color: #105fad;
+}
+
+
+.ground .reports{
+    border: 1px solid #777;
+    border-radius: 5px;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.reports .report{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.report h2{
+    color: #aaa;
+    margin-bottom: .5rem;
+}
+.report img{
+    width: 100%;
 }

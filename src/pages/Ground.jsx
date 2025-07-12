@@ -37,8 +37,12 @@ const Ground = () => {
             </div>
             <div className="reports">
 
-                <img src={`https://github-readme-activity-graph.vercel.app/graph?username=${user.login}&theme=react-dark`} alt="" />
+                <div className="report">
+                    <h2>GitHub Activity Graph</h2>
+                    <img src={`https://github-readme-activity-graph.vercel.app/graph?username=${user.login}&theme=react-dark`} alt="" />
+                </div>
 
+.
                 <img src={`http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=${user.login}&theme=github_dark`} alt="" />
 
 
