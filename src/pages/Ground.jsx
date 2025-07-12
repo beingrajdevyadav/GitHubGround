@@ -37,6 +37,8 @@ const Ground = () => {
                 <img src={`https://github-readme-stats.vercel.app/api?username=${user.login}&show_icons=true&theme=github_dark`} alt="" />
 
                 <img src={`https://streak-stats.demolab.com?user=${user.login}&theme=dark`} alt="" />
+
+                <img src={`http://github-profile-summary-cards.vercel.app/api/cards/stats?username=${user.login}&theme=github_dark`} alt="" />
             </div>
         </div>
     )
