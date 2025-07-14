@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 import "../css/Repos.css"
 import { useNavigate } from 'react-router-dom';
 import { infoToast } from '../toasts/toasts';
+import CopyButton from '../components/CopyButton';
 
 
 const Repos = () => {
@@ -58,7 +59,7 @@ const openRepo = (url)=>{
               <h2>{rep.name}</h2>
               <p>{rep.description}</p>
               <div className="repo-actions">
-                <button>Clone </button>
+               <CopyButton cloneUrl={rep.clone_url} txt={"Copy Clone URL"}/>
                 <button onClick={()=>openRepo(rep.svn_url)}>Open </button>
                 
               </div>
