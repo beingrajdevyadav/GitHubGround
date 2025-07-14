@@ -31,7 +31,7 @@
     border-radius: 50%;
 }
 .light{
-    color: #555;
+    color: #777;
    margin-bottom: .25rem;
 }
 
@@ -70,4 +70,17 @@ gap: .5rem;
 .repo-actions button:hover{
     background-color: #105fad;
 
+}
+
+@media screen and (max-width:786px) {
+    .user-info img{
+        width: 100px;
+        height: 100px;
+    }
+    .user-details h1{
+font-size: 1.5rem;
+    }
+    .user-details .bio{
+        font-size: 14px;
+    }
 }

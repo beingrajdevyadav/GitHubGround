@@ -47,7 +47,7 @@ const openRepo = (url)=>{
         <div className="user-details">
           <h1>{user.name}</h1>
           <p className='light'>{user.login}</p>
-          <p>{user.bio}</p>
+          <p className='bio'>{user.bio}</p>
         </div>
       </div>
 
