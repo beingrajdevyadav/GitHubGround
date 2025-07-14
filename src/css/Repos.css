@@ -1,6 +1,7 @@
-.repos{
+.repos {
     padding: 2rem;
 }
+
 .repos .back-btn {
     height: 50px;
     width: 50px;
@@ -16,7 +17,8 @@
 .repos .back-btn:hover {
     background-color: #105fad;
 }
-.user-info{
+
+.user-info {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,40 +26,50 @@
     color: #ddd;
 }
 
-.user-info img{
+.user-info img {
     width: 200px;
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
 }
-.light{
+
+.light {
     color: #777;
-   margin-bottom: .25rem;
+    margin-bottom: .25rem;
 }
 
-.repos-list{
+.repos-list {
     padding: 1rem 0;
 }
 
-.repo{
-border: 1px solid #333;
-border-radius: 5px;
-padding: 1rem;
-margin: 1rem 0;
+.repo {
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem 0;
 }
 
-.repo p{
+.repo p {
     font-size: 14px;
 }
-.repo-actions{
-margin-top: .5rem;
-display: flex;
-justify-content: start;
-gap: .5rem;
+
+.bio.large{
+    display: block;
 }
-.repo-actions button{
+.bio.small{
+    display: none;
+}
+
+.repo-actions {
+    margin-top: .5rem;
+    display: flex;
+    justify-content: start;
+    gap: .5rem;
+}
+
+.repo-actions button {
     height: 35px;
-        background-color: #0c437a;
+    background-color: #0c437a;
     color: #ddd;
     outline: none;
     border: none;
@@ -67,20 +79,29 @@ gap: .5rem;
     padding: 0 1rem;
 }
 
-.repo-actions button:hover{
+.repo-actions button:hover {
     background-color: #105fad;
 
 }
 
 @media screen and (max-width:786px) {
-    .user-info img{
+    .user-info img {
         width: 100px;
         height: 100px;
     }
-    .user-details h1{
-font-size: 1.5rem;
+
+    .user-details h1 {
+        font-size: 1.5rem;
     }
-    .user-details .bio{
+.bio.large{
+    display: none;
+}
+.bio.small{
+    display: block;
+    margin-top: 1rem;
+    color: #ddd;
+}
+    .bio {
         font-size: 14px;
     }
 }

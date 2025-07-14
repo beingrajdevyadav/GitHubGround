@@ -9,7 +9,7 @@ import CopyButton from '../components/CopyButton';
 
 const Repos = () => {
   const user = useSelector(state => state.user);
-  console.log(user);
+  // console.log(user);
 
   const [repos, setRepos] = useState([]);
   const navigate = useNavigate();
@@ -18,7 +18,7 @@ const Repos = () => {
     try {
       const { data } = await axios.get(`${user.repos_url}`);
       setRepos(data);
-      console.log(data);
+      // console.log(data);
     } catch (error) {
       console.log(error.response?.status);
     }
@@ -47,9 +47,11 @@ const openRepo = (url)=>{
         <div className="user-details">
           <h1>{user.name}</h1>
           <p className='light'>{user.login}</p>
-          <p className='bio'>{user.bio}</p>
+          <p className='bio large'>{user.bio}</p>
         </div>
       </div>
+
+          <p className='bio small'>{user.bio}</p>
 
 
       <div className="repos-list">
