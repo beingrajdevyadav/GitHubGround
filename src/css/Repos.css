@@ -1,7 +1,21 @@
 .repos{
     padding: 2rem;
 }
+.repos .back-btn {
+    height: 50px;
+    width: 50px;
+    background-color: #0c437a;
+    color: #ddd;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
 
+.repos .back-btn:hover {
+    background-color: #105fad;
+}
 .user-info{
     display: flex;
     justify-content: center;

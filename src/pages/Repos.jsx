@@ -2,6 +2,8 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import "../css/Repos.css"
+import { useNavigate } from 'react-router-dom';
+import { infoToast } from '../toasts/toasts';
 
 
 const Repos = () => {
@@ -9,7 +11,7 @@ const Repos = () => {
   console.log(user);
 
   const [repos, setRepos] = useState([]);
-
+const navigate = useNavigate();
 
   const fetchRepos = async () => {
     try {
@@ -24,10 +26,17 @@ const Repos = () => {
   useEffect(() => {
     fetchRepos();
   }, []);
+
+const handleBackButtonClick = ()=>{
+  infoToast("Welcome To GHG!")
+navigate("/ground");
+
+}
+
   return (
     <div className='repos'>
-                <button onClick={backToHome} className='back-btn'><i className="fa-solid fa-arrow-left"></i></button>
-      
+      <button onClick={handleBackButtonClick} className='back-btn'><i className="fa-solid fa-arrow-left"></i></button>
+
       <div className="user-info">
         <img src={user.avatar_url} alt="" />
 
