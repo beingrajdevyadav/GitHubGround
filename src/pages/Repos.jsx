@@ -15,7 +15,7 @@ const Repos = () => {
     try {
       const { data } = await axios.get(`${user.repos_url}`);
       setRepos(data);
-      // console.log(data);
+      console.log(data);
     } catch (error) {
       console.log(error.response?.status);
     }
@@ -26,6 +26,8 @@ const Repos = () => {
   }, []);
   return (
     <div className='repos'>
+                <button onClick={backToHome} className='back-btn'><i className="fa-solid fa-arrow-left"></i></button>
+      
       <div className="user-info">
         <img src={user.avatar_url} alt="" />
 

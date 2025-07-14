@@ -31,3 +31,13 @@ border-radius: 5px;
 padding: 1rem;
 margin: 1rem 0;
 }
+
+.repo p{
+    font-size: 14px;
+}
+.repo-actions{
+margin-top: .5rem;
+}
+.repo-actions button{
+    height: 35px;
+}
