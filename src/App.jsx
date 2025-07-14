@@ -10,21 +10,15 @@ import { useSelector } from 'react-redux'
 
 function App() {
 const user = useSelector(state=>state.user.name);
-console.log(user);
 
-if(user){
-  console.log("User Exists!")
-}else{
-  console.log("User Doesn't Exist!!");
-}
   return (
     <>
 
     <Header/>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/ground' element={<Ground />} />
-        <Route path='/repos' element={<Repos />} />
+        <Route path='/ground' element={user ? <Ground /> : <Home/>} />
+        <Route path='/repos' element={user ? <Repos /> : <Home/>} />
       </Routes>
       <Footer/>
     </>

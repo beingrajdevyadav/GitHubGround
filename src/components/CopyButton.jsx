@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { infoToast } from '../toasts/toasts';
 
 const CopyButton = ({ cloneUrl, txt }) => {
     const [copied, setCopied] = useState(false);
@@ -8,7 +9,8 @@ const CopyButton = ({ cloneUrl, txt }) => {
         try {
             await navigator.clipboard.writeText(cloneUrl);
             setCopied(true);
-
+            infoToast("Copied Clone URL!");
+            
             setTimeout(() => {
                 setCopied(false);
             }, 5000)
@@ -17,7 +19,7 @@ const CopyButton = ({ cloneUrl, txt }) => {
         }
     }
     return (
-        <button onClick={handleCopy}>{copied? "Copied" : txt}</button>
+        <button onClick={handleCopy}>{copied ? "Copied" : txt}</button>
     )
 }
 

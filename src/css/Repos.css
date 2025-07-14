@@ -53,10 +53,11 @@
     font-size: 14px;
 }
 
-.bio.large{
+.bio.large {
     display: block;
 }
-.bio.small{
+
+.bio.small {
     display: none;
 }
 
@@ -85,6 +86,10 @@
 }
 
 @media screen and (max-width:786px) {
+    .user-info{
+        padding: .5rem 0;
+        justify-content: space-between;
+    }
     .user-info img {
         width: 100px;
         height: 100px;
@@ -93,14 +98,17 @@
     .user-details h1 {
         font-size: 1.5rem;
     }
-.bio.large{
-    display: none;
-}
-.bio.small{
-    display: block;
-    margin-top: 1rem;
-    color: #ddd;
-}
+
+    .bio.large {
+        display: none;
+    }
+
+    .bio.small {
+        display: block;
+        margin-top: 1rem;
+        color: #ddd;
+    }
+
     .bio {
         font-size: 14px;
     }
