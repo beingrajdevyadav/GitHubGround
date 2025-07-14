@@ -11,7 +11,7 @@ const Repos = () => {
   console.log(user);
 
   const [repos, setRepos] = useState([]);
-const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const fetchRepos = async () => {
     try {
@@ -27,11 +27,21 @@ const navigate = useNavigate();
     fetchRepos();
   }, []);
 
-const handleBackButtonClick = ()=>{
-  infoToast("Welcome To GHG!")
-navigate("/ground");
+  const handleBackButtonClick = () => {
+    infoToast("Welcome To GHG!")
+    navigate("/ground");
+  }
 
-}
+  const downloadRepo = (url) => {
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download");
+
+    link.setAttribute("target", "_blank");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
 
   return (
     <div className='repos'>
