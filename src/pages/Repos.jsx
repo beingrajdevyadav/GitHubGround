@@ -61,7 +61,12 @@ const Repos = () => {
       <p className='bio small'>{user.bio}</p>
 
 
+      <div className="repos-header">
+        <h2>Repos List</h2>
+      </div>
+      
       <div className="repos-list">
+
         {
           isLoading ? (
             <div className="repos-img">

@@ -2,6 +2,14 @@
     padding: 2rem;
 }
 
+.repos-header {
+    padding: .5rem;
+    background-color: #ffb300c1;
+    text-align: center;
+    color: #ddd;
+    margin: 2rem 0;
+}
+
 .repos .back-btn {
     height: 50px;
     width: 50px;
@@ -42,7 +50,7 @@
     padding: 1rem 0;
 }
 
-.repos-img{
+.repos-img {
     width: 100%;
     border-radius: 50%;
     overflow: hidden;
@@ -50,9 +58,11 @@
     display: flex;
     justify-content: center;
 }
-.repos-img img{
+
+.repos-img img {
     height: 300px;
 }
+
 .repo {
     border: 1px solid #333;
     border-radius: 5px;
@@ -97,10 +107,11 @@
 }
 
 @media screen and (max-width:786px) {
-    .user-info{
+    .user-info {
         padding: .5rem 0;
         justify-content: space-between;
     }
+
     .user-info img {
         width: 100px;
         height: 100px;
