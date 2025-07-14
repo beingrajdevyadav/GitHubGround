@@ -9,16 +9,23 @@ import CopyButton from '../components/CopyButton';
 
 const Repos = () => {
   const user = useSelector(state => state.user);
+  const [isLoading, setIsLoading] = useState(false);
   // console.log(user);
 
   const [repos, setRepos] = useState([]);
   const navigate = useNavigate();
 
   const fetchRepos = async () => {
+    setIsLoading(true);
+
     try {
       const { data } = await axios.get(`${user.repos_url}`);
       setRepos(data);
       // console.log(data);
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 2000);
+
     } catch (error) {
       console.log(error.response?.status);
     }
@@ -33,9 +40,9 @@ const Repos = () => {
     navigate("/ground");
   }
 
-const openRepo = (url)=>{
-  window.open(url, "_blank");
-}
+  const openRepo = (url) => {
+    window.open(url, "_blank");
+  }
 
   return (
     <div className='repos'>
@@ -51,22 +58,29 @@ const openRepo = (url)=>{
         </div>
       </div>
 
-          <p className='bio small'>{user.bio}</p>
+      <p className='bio small'>{user.bio}</p>
 
 
       <div className="repos-list">
         {
-          repos?.map((rep, i) => (
-            <div className='repo' key={i}>
-              <h2>{rep.name}</h2>
-              <p>{rep.description}</p>
-              <div className="repo-actions">
-               <CopyButton cloneUrl={rep.clone_url} txt={"Copy Clone URL"}/>
-                <button onClick={()=>openRepo(rep.svn_url)}>Open </button>
-                
-              </div>
+          isLoading ? (
+            <div className="repos-img">
+              <img src="https://assets-v2.lottiefiles.com/a/e372720e-6605-11ee-871a-8f8eda2d921c/3voaK5KS17.gif" alt="" />
             </div>
-          ))
+          ) : (
+            repos?.map((rep, i) => (
+              <div className='repo' key={i}>
+                <h2>{rep.name}</h2>
+                <p>{rep.description}</p>
+                <div className="repo-actions">
+                  <CopyButton cloneUrl={rep.clone_url} txt={"Copy Clone URL"} />
+                  <button onClick={() => openRepo(rep.svn_url)}>Open </button>
+
+                </div>
+              </div>
+            )
+
+            ))
         }
       </div>
     </div>
