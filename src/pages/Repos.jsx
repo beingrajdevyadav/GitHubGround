@@ -32,7 +32,9 @@ const Repos = () => {
     navigate("/ground");
   }
 
-
+const openRepo = (url)=>{
+  window.open(url, "_blank");
+}
 
   return (
     <div className='repos'>
@@ -57,7 +59,7 @@ const Repos = () => {
               <p>{rep.description}</p>
               <div className="repo-actions">
                 <button>Clone </button>
-                <button>Open </button>
+                <button onClick={()=>openRepo(rep.svn_url)}>Open </button>
                 
               </div>
             </div>
