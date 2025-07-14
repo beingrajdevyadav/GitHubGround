@@ -51,7 +51,23 @@ margin: 1rem 0;
 }
 .repo-actions{
 margin-top: .5rem;
+display: flex;
+justify-content: start;
+gap: .5rem;
 }
 .repo-actions button{
     height: 35px;
+        background-color: #0c437a;
+    color: #ddd;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    padding: 0 1rem;
+}
+
+.repo-actions button:hover{
+    background-color: #105fad;
+
 }

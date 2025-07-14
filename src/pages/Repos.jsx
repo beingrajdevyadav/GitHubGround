@@ -32,16 +32,7 @@ const Repos = () => {
     navigate("/ground");
   }
 
-  const downloadRepo = (url) => {
-    const link = document.createElement("a");
-    link.href = url;
-    link.setAttribute("download");
 
-    link.setAttribute("target", "_blank");
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }
 
   return (
     <div className='repos'>
@@ -67,7 +58,7 @@ const Repos = () => {
               <div className="repo-actions">
                 <button>Clone </button>
                 <button>Open </button>
-                <button>Download</button>
+                
               </div>
             </div>
           ))
