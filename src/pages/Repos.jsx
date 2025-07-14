@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
+import "../css/Repos.css"
+
 
 const Repos = () => {
   const user = useSelector(state => state.user);
@@ -28,17 +30,18 @@ const Repos = () => {
         <img src={user.avatar_url} alt="" />
 
         <div className="user-details">
-          <h2>{user.name}</h2>
-          <p>{user.login}</p>
+          <h1>{user.name}</h1>
+          <p className='light'>{user.login}</p>
           <p>{user.bio}</p>
         </div>
       </div>
+
 
       <div className="repos-list">
         {
           repos?.map((rep, i) => (
             <div className='repo' key={i}>
-              <h4>{rep.name}</h4>
+              <h2>{rep.name}</h2>
               <p>{rep.description}</p>
               <div className="repo-actions">
                 <button>Clone </button>
